@@ -1,0 +1,66 @@
+.countdown
+  display: flex
+  align-items: center
+
+  .days,
+  .hours,
+  .minutes,
+  .seconds
+    height: 5.4rem
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: space-between
+    margin: 1.6rem 0.8rem
+    text-transform: uppercase
+
+    &-title
+      font-size: 1.4rem
+      line-height: 2.9rem
+      font-weight: 400
+      color: var(--textSecondary)
+
+      +breakpoint(600px)
+        font-size: 1.6rem
+        line-height: 2.1rem
+
+      +breakpoint(768px)
+        font-size: 2.4rem
+        line-height: 3.9rem
+
+    &-number
+      font-size: 2.4rem
+      line-height: 3.9rem
+      font-weight: 900
+      position: relative
+      display: flex
+      justify-content: center
+      width: 5.2rem
+
+      +breakpoint(600px)
+        font-size: 3.6rem
+        line-height: 5.1rem
+        width: 6rem
+
+      +breakpoint(768px)
+        font-size: 5.4rem
+        line-height: 6.9rem
+        width: 8.9rem
+
+    +breakpoint(768px)
+      height: 8.1rem
+      margin: 2.4rem 1.6rem
+
+.minutes-number,
+.seconds-number
+  &::before
+    content: ':'
+    position: absolute
+    top: 0
+    left: -1.2rem
+
+    +breakpoint(600px)
+      left: -1.4rem
+
+    +breakpoint(768px)
+      left: -2.4rem
